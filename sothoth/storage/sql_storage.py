@@ -405,6 +405,9 @@ class SQLStorageAdapter(StorageAdapter):
                     session.add(nc_candidate_predicates[0])
                     serialization['predicate_id'] = nc_candidate_predicates[0].id
                     serialization['predicate'] = None
+            elif serialization['predicate']:
+                # Predicate adding, refill the contexts
+                serialization['predicate'].contexts = contexts
 
             # Check if exists identical object
             candidate_objects = self._query(serialization['object'], session = session).all()
