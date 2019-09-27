@@ -97,7 +97,7 @@ class Answeroid(object):
 
         return knowledge
 
-    def get_answer(self, question=None, **kwargs):
+    def get_answer(self, question, **kwargs):
         """
         Return the response based on the input.
 
