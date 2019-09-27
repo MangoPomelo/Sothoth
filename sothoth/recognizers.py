@@ -19,7 +19,7 @@ class Recognizer(object):
 
         :param tokens: A list of tagged tokens.
         :returns: A list of (entity, pos_tag, entity_type) pairs.
-        :rtype list(tuple(str, str))
+        :rtype list(tuple(str, str, str))
         """
         raise self.RecognizerMethodNotImplementedError(
             'The `tag` method is not implemented by this recognizer.'
